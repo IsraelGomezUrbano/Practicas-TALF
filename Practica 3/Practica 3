@@ -1,0 +1,65 @@
+\documentclass{article}
+% pre\'ambulo
+
+\usepackage{graphicx}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{mathtools}
+\usepackage{whilecode2}
+\title{Práctica 3}
+\author{Israel Gómez Urbano}
+
+\begin{document}
+\maketitle
+
+
+\section{Ejercicio 1}
+
+Gracias a las herramientas proporcionadas por el programa JFLAP, podemos proporcionar desarrollo del automata pedido anteriormente.\\
+\\
+\includegraphics[width=1\linewidth]{Captura 1.png}\\
+\newpage
+
+
+\section{Ejercicio 2}
+El objetivo de este ejercicio, es definir una ecuación recursiva, para la suma de 3 valores. Lo cual, puede ser expresado de la siguiente forma:
+\\
+\\
+\centering $ <\ <(\pi^1_1) | \sigma(\pi^3_3)> | \sigma(\pi^4_4)> $
+\newline
+\newline
+\raggedright
+De esta forma, aplicando la función para los valores 2,3 y 4, nos devuelve 9:
+\newline
+\newline
+\centering \includegraphics[width=0.65\linewidth]{Captura 2.png}\\
+\raggedright
+\pagebreak 
+\section{Ejercicio 3}
+El objetivo de este ejercicio, es la implementación de un programa WHILE, el cual compute la suma de 3 valores. Obteniendo así el siguiente programa: 
+
+\centering
+\begin{whilecode} [h]
+\HeaderComment{\textnormal{$Q= (1, s)$\\}}
+\HeaderComment{\textnormal{s:\\
+\DefaultVar{1}\Assig\DefaultVar{1};\\
+\DefaultVar{2}\Assig\DefaultVar{2};\\
+\DefaultVar{3}\Assig\DefaultVar{3};\\
+}}
+
+
+\While{$G(X_2) \not = 0$}{
+\While{$G(X_3) \not = 0$}{
+  $X_2 \Assig X_2 + 1$\;
+  $X_3 \Assig X_3 - 1$\;
+ }
+  $X_1 \Assig X_1 + 1$\;
+  $X_2 \Assig X_2 - 1$\;
+ }
+
+ \DefaultVar{1}\Assig\DefaultVar{1};
+\end{whilecode}
+
+\end{document}
